@@ -16,6 +16,6 @@
         "yiisoft/yii2": "*"
     },
      "autoload": {
-        "psr-4": { "morrisjs\\": "" }
+        "psr-4": { "juratitov\\morrisjs\\": "" }
     }
 }

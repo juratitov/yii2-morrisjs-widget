@@ -4,7 +4,7 @@
  * @copyright Copyright (c) 2015
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
-namespace dosamigos\chartjs;
+namespace juratitov\morrisjs;
 
 use yii\web\AssetBundle;
 

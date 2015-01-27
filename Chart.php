@@ -6,7 +6,7 @@
  * @license http://opensource.org/licenses/BSD-3-Clause
  */
 
-namespace morrisjs\chart;
+namespace juratitov\morrisjs;
 
 use yii\base\InvalidConfigException;
 use yii\base\Widget;
@@ -103,7 +103,6 @@ class Chart extends Widget
     }
 
     /**
-     * Validate required options
      * 
      * @param type $type
      * @return type
