@@ -75,7 +75,6 @@ class Chart extends Widget
      */
     public function run()
     {
-
         echo Html::tag('div', '', $this->elementOptions);
         $this->registerPlugin($this->type);
     }
@@ -107,6 +106,7 @@ class Chart extends Widget
     }
 
     /**
+     * Validate options
      * 
      * @param type $type
      * @return type
