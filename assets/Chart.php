@@ -30,7 +30,9 @@ class Chart extends Widget
      *
      * @var array the HTML options for div element
      */
-    public $elementOptions = [];
+    public $elementOptions = [
+        'style' => 'height: 250px;'
+    ];
 
     /**
      * @var string the type of chart to display. The possible options are:
@@ -55,12 +57,14 @@ class Chart extends Widget
     {
         parent::init();
 
-        if ($this->type === null || $this->validateType($this->type)) {
+        if ($this->type === null || !$this->validateType($this->type)) {
             throw new InvalidConfigException("The 'type' option is required or not valid");
         }
 
         if (!isset($this->options['element'])) {
             $this->options['element'] = $this->getId();
+        } else {
+            $this->elementOptions['id'] = $this->options['element'];
         }
 
         $this->validateRequiredOptions($this->type);
@@ -71,6 +75,7 @@ class Chart extends Widget
      */
     public function run()
     {
+
         echo Html::tag('div', '', $this->elementOptions);
         $this->registerPlugin($this->type);
     }
@@ -84,11 +89,10 @@ class Chart extends Widget
         $view = $this->getView();
         ChartPluginAsset::register($view);
 
-        if ($this->options !== false && !empty($this->data)) {
-            $options = Json::encode($this->options);
-            $js = "Morris.$name($options)";
-            $view->registerJs($js);
-        }
+        $options = Json::encode($this->options);
+        $js = "new Morris.$name($options)";
+        
+        $view->registerJs($js);
     }
 
     /**
