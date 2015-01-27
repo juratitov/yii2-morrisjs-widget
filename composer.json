@@ -1,0 +1,21 @@
+{
+    "name": "juratitov/yii2-morrisjs-widget",
+    "description": "Morris.js charts widget for Yii2.",
+    "keywords": ["yii", "extension", "widget", "chart", "morris.js"],
+    "homepage": "https://github.com/juratitov/yii2-morrisjs-widget",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Jura Titov",
+            "email": "jura.spica@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+     "autoload": {
+        "psr-4": { "morrisjs\\": "" }
+    }
+}
