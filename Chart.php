@@ -103,6 +103,7 @@ class Chart extends Widget
     }
 
     /**
+     * Validate required options
      * 
      * @param type $type
      * @return type
