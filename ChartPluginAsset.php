@@ -19,6 +19,10 @@ class ChartPluginAsset extends AssetBundle
 
     public $sourcePath = '@vendor/juratitov/yii2-morrisjs-widget/assets';
 
+    public $depends = [
+        'yii\web\YiiAsset',
+    ];
+    
     public function init()
     {
         $this->js = YII_DEBUG ? ['js/raphael.min.js', 'js/morris.js'] : ['js/raphael.min.js', 'js/morris.min.js'];
